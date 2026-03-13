@@ -4,7 +4,7 @@ module.exports = {
     commands: ['off', 'on'],
     isOwner: true,
     exec: async (sock, jid, m, args, { command }) => {
-        if (command === 'off') {
+        if (command === 'stop') {
             config.MODE = 'private'; 
             await sock.sendMessage(jid, { text: '⚠️ تم تحويل البوت إلى الوضع الخاص (OFF) بنجاح.' }, { quoted: m });
         }
